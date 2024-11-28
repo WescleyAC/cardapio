@@ -169,6 +169,7 @@ checkoutBtn.addEventListener('click', function () {
     let total = 0
     const cartItems = cart.map((item) => {
         total += item.quantity * item.price
+        let totalFormatado = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL'})
         return (
             ` ${item.name} Quantidade: (${item.quantity}) Preço: ${item.price.toFixed(2)} 
             Total: ${totalFormatado} | `
