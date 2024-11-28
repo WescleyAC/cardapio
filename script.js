@@ -166,9 +166,12 @@ checkoutBtn.addEventListener('click', function () {
     }
 
     //Enviar o pedido para Api Watsapp
+    let total = 0
     const cartItems = cart.map((item) => {
+        total += item.quantity * item.price
         return (
-            ` ${item.name} Quantidade: (${item.quantity}) Preço: ${item.price.toFixed(2)} | `
+            ` ${item.name} Quantidade: (${item.quantity}) Preço: ${item.price.toFixed(2)} 
+            Total: ${totalFormatado} | `
         )
     }).join('')
     
